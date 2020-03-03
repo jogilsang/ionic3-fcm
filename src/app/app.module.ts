@@ -7,7 +7,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { FCM } from '@ionic-native/fcm';
-// import {IonicStorageModule} from "@ionic/storage"; //IonicStorageModule을 추가한다. 
+import {IonicStorageModule} from "@ionic/storage"; //IonicStorageModule을 추가한다. 
 
 @NgModule({
   declarations: [
@@ -16,8 +16,8 @@ import { FCM } from '@ionic-native/fcm';
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
-    // IonicStorageModule.forRoot(), //IonicStorageModule을 추가한다.
+    IonicModule.forRoot(MyApp),
+    IonicStorageModule.forRoot(), //IonicStorageModule을 추가한다.
   ],
   bootstrap: [IonicApp],
   entryComponents: [
